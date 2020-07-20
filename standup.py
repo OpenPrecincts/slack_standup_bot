@@ -57,7 +57,7 @@ if __name__ == "__main__":
     with open('thread_ts_pickle', 'wb') as f:
         pickle.dump(thread_ts, f)
 
-    time.sleep(54 if config.debug else 5400) # wait 1.5 hours
+    time.sleep(90 if config.debug else 9000) # wait 2.5 hours
     with open('msg_lst', 'rb') as f:
         member_ID_to_standup = pickle.load(f)
         missing_member_ID_set = set(config.standup_member_IDs.difference(member_ID_to_standup.keys()))
